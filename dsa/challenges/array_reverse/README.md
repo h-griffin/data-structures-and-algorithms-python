@@ -1,11 +1,11 @@
 # Challenge Summary
-<!-- Short summary or background information -->
+array reverse
 
 ## Challenge Description
-<!-- Description of the challenge -->
+reverse the array without using any built in array methods.
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
-<!-- Embedded whiteboard image -->
+[array reverse whiteboard image](/assets/reverse_array.png)
