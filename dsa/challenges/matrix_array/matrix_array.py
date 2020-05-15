@@ -1,3 +1,17 @@
+def matrix_array(arr):
+  output_arr = [] # [ rowVal, rowVal] 
+  for i in range(len(arr)):
+    print(arr[i])
+    counter = 0
+    for j in range(len(arr[i])):
+      counter += (arr[i][j])
+    print(counter)
+    output_arr.append(counter)
+  print(output_arr)
+  return output_arr
+
+matrix_array([ [1,2,3], [4,5,6] ]) # [ 6, 15 ]
+
 # def matrix_array(arr):
   # print(arr)
   # small_arr = []
@@ -19,15 +33,9 @@
       #   print(arr)
       # if j == len(arr)+1:
       #   break
-matrix_array([ [1,2,3], [4,5,6] ]) # [ 6, 15 ]
 
-def matrix_array(arr):
-  output_arr = [] # [ rowVal, rowVal] 
-  for i in range(len(arr)):
-    print(arr[i])
-    for j in range(len(arr[i])):
-      print(arr[i][j])
-  return output_arr
+
+
 
 # def matrix_array(arr):
   # for i in arr:
