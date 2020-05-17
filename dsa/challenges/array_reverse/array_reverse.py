@@ -1,2 +1,2 @@
 def array_reverse(arr):
-  return arr[::-1]
+    return arr[::-1]
