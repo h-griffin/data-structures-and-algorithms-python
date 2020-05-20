@@ -20,17 +20,16 @@ class Linked_list:
         self.head = Node(value, self.head)
 
     def includes(self, value):
-        #if value exists as Node value in list
+        # if value exists as Node value in list
         pass
-    
+
     def append(self, value):
-      #adds new node to end of list
-      pass
+        # adds new node to end of list
+        pass
 
     def insert_after(self, value, newVal):
-      #insert newVal node immediatly after first value node
-      pass
-
+        # insert newVal node immediatly after first value node
+        pass
 
 
 # not for public use
@@ -46,3 +45,6 @@ class Node:
 
     def __repr__(self):
         return f"{self.value} : {self.next}"
+
+
+
