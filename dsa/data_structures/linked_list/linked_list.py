@@ -1,27 +1,33 @@
 class Linked_list:
-    def __init__(self):
+    def __init__(self, value=None):
         self.head = None
 
     def __repr__(self):
         return f"linked list : {self.head}"
 
     def __str__(self):
-        res = ""
+        answer = ""
         current = self.head
 
         while current:
             # { bananas } -> { apples } -> NULL
-            res += "{ " + str(current.value) + " } -> "
+            answer += f"{{ {str(current.value)} }} -> "
             current = current.next
 
-            return res + " NULL"
+            return answer + "NULL"
 
     def insert(self, value):
+        """creates new Node and adds to linked-list"""
         self.head = Node(value, self.head)
 
     def includes(self, value):
-        # if value exists as Node value in list
-        pass
+        """boolean t/f if value exists as Node in list"""
+        current = self.head
+        while current:
+            if current.value == value:
+                return True
+            current = current.next
+        return False
 
     def append(self, value):
         # adds new node to end of list
