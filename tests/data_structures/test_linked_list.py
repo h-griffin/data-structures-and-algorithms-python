@@ -1,5 +1,5 @@
-import pytest
 from dsa.data_structures.linked_list.linked_list import Linked_list, Node
+import pytest
 
 
 def test_instance():
@@ -9,11 +9,11 @@ def test_instance():
 
 def test_insert_empty():
     ll = Linked_list
-    ll.insert("apples")
+    ll.insert("apples", None)
     assert ll.head.value == "apples"
 
 
-def test_insert_full():
+def test_insert():
     ll = Linked_list()
     ll.insert("apples")
     ll.insert("bananas")
@@ -31,3 +31,32 @@ def test_str():
 def tests_node_exception():
     with pytest.raises(TypeError):
         Node("ugh", "this is not a Node")
+
+def test_insert_before(llist):
+    llist.insert_before("apple", "donut" )
+    assert str(llist) == "{ carrot } -> { banana } -> { donut } -> { apple } -> NULL"
+ 
+def test_insert_after(llist):
+    llist.insert.after("banana", "donut")
+    assert str(llist) == "{ carrot } -> { banana } -> { donut } -> { apple } -> NULL"
+
+
+def test_includes_true(llist):
+    assert llist.includes("carrot") == True
+
+def test_includes_false(llist):
+    assert llist.includes("donut") == False
+
+def test_append(llist):
+    llist.append("donut")
+    assert str(llist) == "{ carrot } -> { banana } -> { apple } -> { donut } -> NULL"
+
+
+@pytest.fixture
+def llist():
+    """linked list for testing"""
+    ll = Linked_list()
+    ll.insert("apple")
+    ll.insert("banana")
+    ll.insert("carrot")
+    return ll #"{ carrot } -> { banana } -> { apple } -> NULL"
