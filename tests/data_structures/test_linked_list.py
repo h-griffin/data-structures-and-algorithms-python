@@ -35,7 +35,7 @@ def tests_node_exception():
 def test_insert_before(llist):
     llist.insert_before("apple", "donut" )
     assert str(llist) == "{ carrot } -> { banana } -> { donut } -> { apple } -> NULL"
- 
+
 def test_insert_after(llist):
     llist.insert.after("banana", "donut")
     assert str(llist) == "{ carrot } -> { banana } -> { donut } -> { apple } -> NULL"
@@ -51,6 +51,16 @@ def test_append(llist):
     llist.append("donut")
     assert str(llist) == "{ carrot } -> { banana } -> { apple } -> { donut } -> NULL"
 
+def test_k():
+    ll = Linked_list()
+    ll.insert(5)    # 5- 4- 3- 2- 1
+    ll.insert(4)
+    ll.insert(3)
+    ll.insert(2)
+    ll.insert(1)
+    actual = ll.kth_from_end(0)
+    expected = 5
+    assert actual == expected
 
 @pytest.fixture
 def llist():
