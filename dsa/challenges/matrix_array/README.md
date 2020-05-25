@@ -13,4 +13,4 @@ All nulls will be counted as zeros.
 loop through first array of arrays, for each index in the range of that indexed array, increment counter. append the counter value to the output array to record the total value of that small array. move to the next small array in the large array. return the output array of the values for each array. 
 
 ## Solution
-[matrix array whiteboard image](/assets/matrix_array.png)
+![matrix array whiteboard image](/assets/matrix_array.png)

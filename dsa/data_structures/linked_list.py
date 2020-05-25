@@ -41,8 +41,8 @@ class Linked_list:
     def insert_before(self, value, newVal):
         """takes in a value already in linked list and a new value to add in place before it"""
         current = self.head
-        while current: 
-            if current.next == None: 
+        while current:
+            if current.next == None:
                 return 'Value not in linked list'
             if current.next.value == value: #create in this spot if the next one is the given value
                 current.next = Node(newVal, current.next)
@@ -60,6 +60,16 @@ class Linked_list:
                 break
             current = current.next
 
+    def kth_from_end(self, k):
+        """takes in a value(k) and returns the Node k places away from the tail"""
+        current = self.head
+        if k < 0:
+            raise ValueError("value must be positive")
+        while current:
+            if current.next == None:
+                return current - k
+            else:
+                return 'not working'
 
 # not for public use
 class Node:
