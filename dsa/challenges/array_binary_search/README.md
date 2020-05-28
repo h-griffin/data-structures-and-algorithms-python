@@ -8,4 +8,4 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
-[ array binary search ]
+![array binary search whiteboard image](/assets/reverse_array.png)

@@ -15,4 +15,3 @@ create a stack called kennel, and a temporary list to hold the object /animal. w
 
 
 ### help from James Salomonsen
-q
