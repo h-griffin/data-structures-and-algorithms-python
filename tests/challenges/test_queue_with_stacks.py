@@ -19,7 +19,7 @@ def test_en_de_en_de():
     pq.enqueue('apples')
     pq.enqueue('bananas')
 
-    pq.dequeue
+    pq.dequeue()
 
     pq.enqueue('carrots')
     pq.enqueue('donuts')
