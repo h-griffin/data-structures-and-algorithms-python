@@ -13,7 +13,19 @@ Square Brackets : []
 Curly Brackets : {}
 
 ## Approach & Efficiency
+create empty list for holding opening brackets -Queue
+
+loop through each character ,i, in input
+if the character is an opening br add it to the queue
+if the character is a closing br
+     if there is not a matching opening br
+          return False
+     if there is a matching opening bracket
+          remove opening bracket form the list
+if the list is empty return true
+  (each opening br found a matching closing and was removed )
+if the list is not empty return false (an opening br was added and was not removed with a match)
 
 
 ## Solution
-![multi bracket validation whiteboard solution](/assets/.png)
+![multi bracket validation whiteboard solution](/assets/multi_bracket_validation.png)
