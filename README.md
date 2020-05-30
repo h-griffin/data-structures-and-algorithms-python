@@ -5,7 +5,7 @@
 # table of contents
 - [challenge-1 : array reverse](dsa/challenges/array_reverse)
 - [challenge-2 : array shift](dsa/challenges/array_shift)
-- [challenge-3 : array binary shift](dsa/challenges/array_binary_search)
+- [challenge-3 : array binary search](dsa/challenges/array_binary_search)
 - [challenge-4 : matrix array](dsa/challenges/matrix_array)
 - [challenge-5 : linked list](dsa/data_structures/linked_list)
 - [challenge-6 : ll insert](dsa/data_structures/linked_list)

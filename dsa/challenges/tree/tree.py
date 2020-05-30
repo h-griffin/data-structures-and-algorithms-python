@@ -21,6 +21,7 @@ class BinaryTree:
         walk(self.root)
         return output
 
+
     def in_order(self):
         """returns array of values ordered left, root, right"""
         output = []
@@ -34,6 +35,7 @@ class BinaryTree:
             walk(node.right) # check right
         walk(self.root)
         return output
+        
 
     def post_order(self):
         """returns array of values ordered left, right, root"""
@@ -48,6 +50,7 @@ class BinaryTree:
             walk(self.root)
         walk(self.root)
         return output
+
 
 class BinarySearchTree(BinaryTree):
     #values greater than root go right, less go left
@@ -89,6 +92,7 @@ class BinarySearchTree(BinaryTree):
         #if value
 
 if __name__ == "__main__":
+    pass
 # bst.add(4)
 # bst.add(7)
 # bst.add(5)
@@ -109,5 +113,4 @@ if __name__ == "__main__":
 # (b) Preorder (Root, Left, Right) : 1 2 4 5 3
 # (c) Postorder (Left, Right, Root) : 4 5 2 3 1
 
-
-#last line
+#SyntaxError: unexpected EOF while parsing
