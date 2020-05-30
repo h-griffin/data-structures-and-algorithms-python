@@ -9,13 +9,13 @@ def test_binary_search_negative():
 
 def test_binary_search_zero():
     actual = binary_search([1, 2, 3, 4, 5], 0)
-    expected = 1
+    expected = -1
     assert actual == expected
 
 
 def test_binary_search_two():
     actual = binary_search([1, 2, 3, 4, 5], 2)
-    expected = 3
+    expected = 1
     assert actual == expected
 
 
