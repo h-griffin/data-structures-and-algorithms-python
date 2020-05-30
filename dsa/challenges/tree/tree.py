@@ -13,12 +13,12 @@ class BinaryTree:
         output = []
         #depth first // root, all left, then right
         def walk(node):
+            """navigates tree"""
             if not node:
                 return
             output.append(node.value)
-            node.pre_order(node.left)
-            node.pre_order(node.right)
-
+            walk(node.left) #check left
+            walk(node.right) # check right
         walk(self.root)
         return output
 
@@ -39,20 +39,21 @@ class BinarySearchTree(BinaryTree):
     def add(self, value):
         """takes in a value, adds a new Node with that value to the correct location in binary search tree"""
         new_node = Node(value) #value from init
-        
+
         def walk(node, new):
-            if new_node.value < node.value:
+            """navigates tree"""
+            if not node:
+                return
+            if new_node.value < node.value: #go left
                 if not node.left:
                     node.left = new_node
                 else:
                     walk(node.left, new_node)
-            else:
+            else: #go right
                 if not node.right:
                     node.right = new_node
                 else:
                     walk(node.right, new_node)
-
-
         if not self.root:
             self.root = new_node
             return
@@ -68,14 +69,13 @@ class BinarySearchTree(BinaryTree):
         #if value > root -right
         #if value
 
-
-bst = BinarySearchTree()
-bst.add(4)
-bst.add(7)
-bst.add(5)
-bst.add(9)
-bst.add(2)
-bst.add(30)
-bst.add(-1)
-bst.pre_order()
+if __name__ == "__main__":
+# bst.add(4)
+# bst.add(7)
+# bst.add(5)
+# bst.add(9)
+# bst.add(2)
+# bst.add(30)
+# bst.add(-1)
+# bst.pre_order()
 #last line
