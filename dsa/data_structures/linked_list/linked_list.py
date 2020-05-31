@@ -60,13 +60,21 @@ class Linked_list:
     def kth_from_end(self, k):
         """takes in a value(k) and returns the Node k places away from the tail"""
         current = self.head
+        arr = []
         if k < 0:
             raise ValueError("value must be positive")
         while current:
-            if current.next == None:
-                return current - k
-            else:
-                return 'not working'
+            arr.append(current)
+            current = current.next
+
+        if len(arr) < k:
+            raise IndexError("Value extends length of List.")
+
+        arr.reverse()
+
+        if k == len(arr):
+            k = k - 1
+        return arr[k].value
 
 # not for public use
 class Node:
