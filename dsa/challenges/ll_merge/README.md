@@ -1,11 +1,22 @@
 # Challenge Summary
-insert shift array : insert integer to middle of array
+linked list merge
 
 ## Challenge Description
-Write a function called insertShiftArray which takes in an array and the value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
+Create a function that takes two linked lists and merges/zipps them together starting with list one then list two
 
 ## Approach & Efficiency
-split the array in half by length by using len() if it is even continue if it is odd add 0.5 to give middle place. rebuilt array one by one in for loop, if the index is less than the previously decided middle value, append to the empty array. if the value is equal to the middle value append the middle value then the new integer. if the index is greater than the middle value, append.
+Create a function that takes in two lists and merges them together starting with 1 then 2
+Create a new list to merge the two
+while  list 1 and 2 have a current and lew list has no head/ empty
+	Insert then append
+		This keeps the order of the lists, insert will create then append will go after
+	If current has a next,
+Change current to next now that current is in the new list already
+When there are no values left, return new list
+
 
 ## Solution
-![array shift whiteboard image](/assets/array_shift.png)
+![ll merge whiteboard image](/assets/ll_merge.png)
+
+## help from :
+- joseph z
