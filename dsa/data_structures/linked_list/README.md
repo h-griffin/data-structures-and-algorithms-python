@@ -1,12 +1,13 @@
 # Challenge Summary
-
+linked list
 
 ## Challenge Description
-
+create a linked list with nodes linking to eachother
 
 ## Approach & Efficiency
-split the array in half by length by looping through
+
+
 
 ## Solution
-![array shift whiteboard image](/assets/array_shift.png)
+![linked list whiteboard image](/assets/.png)
 

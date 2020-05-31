@@ -8,13 +8,10 @@ class Linked_list:
     def __str__(self):
         res = ""
         current = self.head
-
         while current:
-            # { bananas } -> { apples } -> NULL
-            res += "{ " + str(current.value) + " } -> "
+            res += f"{{ {str(current.value)} }} -> "
             current = current.next
-
-            return res + " NULL"
+        return res + "NULL"
 
     def insert(self, value):
         """creates Node and adds to head of linked list"""
