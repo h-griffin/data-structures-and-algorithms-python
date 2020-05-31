@@ -39,3 +39,8 @@ the array is in order of the node connections and is reversed
 ![linked list whiteboard image](/assets/linked_list.png)
 
 ![ll kth from end whiteboard image](/assets/ll_kth_from_end.png)
+
+## help from :
+- Joseph Z
+- James S
+
