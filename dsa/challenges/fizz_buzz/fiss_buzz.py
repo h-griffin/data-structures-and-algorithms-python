@@ -1,3 +1,5 @@
+from collections import deque
+
 class Node:
     def __init__(self, value, left=None, right=None):
         self.value = value
@@ -18,40 +20,52 @@ class BinaryTree:
             """navigates tree"""
             if not node: #base case
                 return
-            output.append(node.value) # root
+            output.append(node.value)
             walk(node.left) # check left
             walk(node.right) # check right
         walk(self.root)
         print(output)
         return output
 
+    def breadth_first(self):
+        items = []
+        breadth = Queue()
+        # add root to queue check empty
+        breadth.enqueue(self.root)
 
-    def in_order(self):
-        """returns array of values ordered left, root, right"""
-        output = []
-        def walk(node):
-            """navigates tree"""
-            if not node:
+        # while someonthing in queue
+        while not breadth.is_empty():
+            #dequeue
+            front = breadth.dequeue()
+            #check dequeued left and enqueue if exists
+            if front.left:
+                breadth.enqueue(front.left)
+            #check dequeued right and enqueue if exists
+            if front.right:
+                breadth.enqueue(front.right)
+            #when out of loop done
+        return
+
+    def add(self, value):
+        node = Node(value)
+        breadth = Queue()
+
+        breadth.enqueue(self.root)
+
+        while not breadth.is_empty():
+            front = breadth.dequeue()
+            if not front.left:
+                front.left = node
                 return
-            walk(node.left) # check left
-            output.append(node.value) # root
-            walk(node.right) # check right
-        walk(self.root)
-        return output
-
-
-    def post_order(self):
-        """returns array of values ordered left, right, root"""
-        output = []
-        def walk(node):
-            """navigates tree"""
-            if not node:
+            if not front.right:
+                front.right = node
                 return
-            walk(node.left) # check left
-            walk(node.right) # check right
-            output.append(node.value) # root
-        walk(self.root)
-        return output
+            if front.left:
+                breadth.enqueue(front.left)
+            if front.right:
+                breadth.enqueue(front.right)
+        return
+
 
 
 class BinarySearchTree(BinaryTree):
@@ -93,27 +107,20 @@ class BinarySearchTree(BinaryTree):
         #if value > root -right
         #if value
 
-if __name__ == "__main__":
-    bst = BinarySearchTree()
-    bst.add(4)
-    bst.add(7)
-    bst.add(5)
-    bst.add(9)
-    bst.add(2)
-    bst.add(30)
-    bst.add(-1)
-    bst.pre_order()
+class Queue:
+    def __init__(self):
+        self.storage = deque()
 
+    def enqueue(self, value):
+        self.storage.appendleft(value)
 
-#notes
+    def dequeue(self):
+        return self.storage.pop()
 
-#        1
-#     2    3
-#   4   5
+    def peek(self):
+        return self.storage[-1]
 
-# Depth First Traversals:
-# (a) Inorder (Left, Root, Right) : 4 2 5 1 3
-# (b) Preorder (Root, Left, Right) : 1 2 4 5 3
-# (c) Postorder (Left, Right, Root) : 4 5 2 3 1
+    def is_empty(self):
+        return len(self.storage) == 0
 
-#SyntaxError: unexpected EOF while parsing
+#last line
