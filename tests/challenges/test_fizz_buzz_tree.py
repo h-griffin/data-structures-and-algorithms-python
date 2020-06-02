@@ -1,6 +1,8 @@
 from dsa.challenges.fizz_buzz_tree.fizz_buzz_tree import Node, BinaryTree, BinarySearchTree, Queue, fizz_buzz_tree
 import pytest
 
+
+
 def test_BinaryTree_breadth():
     tree = BinaryTree()
     tree.add(1)
