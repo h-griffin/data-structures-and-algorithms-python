@@ -16,18 +16,19 @@ class BinaryTree:
     def pre_order(self):
         """returns array of values ordered root, left, right"""
         output = []
-        def walk(node): #root of own tree
+        def walk(root): #root of own tree
             """navigates tree"""
-            if not node: #base case
+            if not root: #base case
                 return
-            output.append(node.value)
-            walk(node.left) # check left
-            walk(node.right) # check right
+            output.append(root.value)
+            walk(root.left) # check left
+            walk(root.right) # check right
         walk(self.root)
         print(output)
         return output
 
     def breadth_first(self):
+        """returns _ of tree top to bottom left to right"""
         items = []
         breadth = Queue()
         # add root to queue check empty
@@ -122,5 +123,33 @@ class Queue:
 
     def is_empty(self):
         return len(self.storage) == 0
+
+def fizz_buzz_tree(tree):
+    """Takes in a tree as a single argument. Changes values throughout the tree based on Fizzbuzz logic, and returns a new tree in the same order and structure.
+    """
+    collection = tree.breadth_first()
+    new_collection = []
+
+    for i in collection:
+        if i % 3 == 0 and i % 5 == 0:
+            i = 'FizzBuzz'
+            new_collection.append(i)
+        elif i % 3 == 0:
+            i = 'Fizz'
+            new_collection.append(i)
+        elif i % 5 == 0:
+            i = 'Buzz'
+            new_collection.append(i)
+        else:
+            i = str(i)
+            new_collection.append(i)
+
+    new_tree = BinaryTree()
+
+    for i in new_collection:
+        new_tree.add(i)
+
+    return new_tree
+
 
 #last line
