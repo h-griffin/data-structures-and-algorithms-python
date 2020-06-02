@@ -4,6 +4,9 @@ class Node:
         self.left = left
         self.right = right
 
+    def __str__(self):
+        return f'Node : {self.value}'
+
 class BinaryTree:
     def __init__(self):
         self.root = None
@@ -11,14 +14,15 @@ class BinaryTree:
     def pre_order(self):
         """returns array of values ordered root, left, right"""
         output = []
-        def walk(node):
+        def walk(node): #root of own tree
             """navigates tree"""
-            if not node:
+            if not node: #base case
                 return
-            output.append(node.value)
+            output.append(node.value) # root
             walk(node.left) # check left
             walk(node.right) # check right
         walk(self.root)
+        print(output)
         return output
 
 
@@ -29,13 +33,12 @@ class BinaryTree:
             """navigates tree"""
             if not node:
                 return
-            output.append(node.value)
             walk(node.left) # check left
-            walk(self.root)
+            output.append(node.value) # root
             walk(node.right) # check right
         walk(self.root)
         return output
-        
+
 
     def post_order(self):
         """returns array of values ordered left, right, root"""
@@ -44,10 +47,9 @@ class BinaryTree:
             """navigates tree"""
             if not node:
                 return
-            output.append(node.value)
             walk(node.left) # check left
             walk(node.right) # check right
-            walk(self.root)
+            output.append(node.value) # root
         walk(self.root)
         return output
 
@@ -92,15 +94,16 @@ class BinarySearchTree(BinaryTree):
         #if value
 
 if __name__ == "__main__":
-    pass
-# bst.add(4)
-# bst.add(7)
-# bst.add(5)
-# bst.add(9)
-# bst.add(2)
-# bst.add(30)
-# bst.add(-1)
-# bst.pre_order()
+    bst = BinarySearchTree()
+    bst.add(4)
+    bst.add(7)
+    bst.add(5)
+    bst.add(9)
+    bst.add(2)
+    bst.add(30)
+    bst.add(-1)
+    bst.pre_order()
+
 
 #notes
 
