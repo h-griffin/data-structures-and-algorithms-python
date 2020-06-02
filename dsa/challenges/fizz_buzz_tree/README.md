@@ -21,3 +21,6 @@ Iterate through the new list with the changed values
 
 ## Solution
 ![ whiteboard image](/assets/fizz_buzz_tree.png)
+
+## worked with:
+- joseph z
