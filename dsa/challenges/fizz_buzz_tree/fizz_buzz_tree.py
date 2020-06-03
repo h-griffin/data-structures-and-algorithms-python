@@ -27,6 +27,33 @@ class BinaryTree:
         # print(output)
         return output
 
+    def in_order(self):
+        """returns array of values ordered left, root, right"""
+        output = []
+        def walk(node):
+            """navigates tree"""
+            if not node:
+                return
+            walk(node.left) # check left
+            output.append(node.value) # root
+            walk(node.right) # check right
+        walk(self.root)
+        return output
+
+
+    def post_order(self):
+        """returns array of values ordered left, right, root"""
+        output = []
+        def walk(node):
+            """navigates tree"""
+            if not node:
+                return
+            walk(node.left) # check left
+            walk(node.right) # check right
+            output.append(node.value) # root
+        walk(self.root)
+        return output
+
     def breadth_first(self):
         """returns list of Node values breadth first, from tree top to bottom left to right"""
         items = []
@@ -52,20 +79,24 @@ class BinaryTree:
         node = Node(value)
         breadth = Queue()
 
-        breadth.enqueue(self.root)
+        if self.root:
+            breadth.enqueue(self.root)
 
-        while not breadth.is_empty():
-            front = breadth.dequeue()
-            if not front.left:
-                front.left = node
-                return
-            if not front.right:
-                front.right = node
-                return
-            if front.left:
-                breadth.enqueue(front.left)
-            if front.right:
-                breadth.enqueue(front.right)
+            while not breadth.is_empty():
+                front = breadth.dequeue()
+                if not front.left:
+                    front.left = node
+                    return
+                if not front.right:
+                    front.right = node
+                    return
+                if front.left:
+                    breadth.enqueue(front.left)
+                if front.right:
+                    breadth.enqueue(front.right)
+
+        else:
+            self.root = node
         return
 
 

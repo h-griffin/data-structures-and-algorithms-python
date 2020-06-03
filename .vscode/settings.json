@@ -1,3 +1,9 @@
 {
-  "python.pythonPath": "/Users/haleygriffin/.pyenv/versions/3.8.2/bin/python"
+"python.pythonPath": "/Users/haleygriffin/Library/Caches/pypoetry/virtualenvs/data-structures-and-algorithms-python-xW415UBR-py3.8/bin/python",
+"python.testing.pytestArgs": [
+    "tests"
+],
+"python.testing.unittestEnabled": false,
+"python.testing.nosetestsEnabled": false,
+"python.testing.pytestEnabled": true
 }
