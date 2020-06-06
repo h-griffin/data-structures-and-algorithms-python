@@ -88,10 +88,10 @@ class BinarySearchTree(BinaryTree):
 
     def contains(self, value):
         """takes in a value, returns boolean if value is in tree"""
-        pass
-        #if value < root -left
-        #if value > root -right
-        #if value
+        if value in self.pre_order(): #returns list
+            return True
+        else:
+            return False
 
 if __name__ == "__main__":
     bst = BinarySearchTree()
