@@ -18,3 +18,7 @@
 - [challenge-13: multi bracket validation](dsa/challenges/multi_bracket_validation)
 - [challenge-14 : whiteboard interview 2](dsa/challenges/)
 - [challenge-15: Binary Tree](dsa/data_structures/tree)
+- [challenge-16: fizz buzz tree](dsa/challenges/fizz_buzz_tree)
+- [challenge-17: breadth first](dsa/challenges/tree)
+- [challenge-18 : find maximum binary tree](dsa/challenges/find_maximum_binary_tree)
+- [challenge-19: whiteboard interview 2](dsa/data_structures/tree)
