@@ -23,12 +23,14 @@ def test_max_val_zero():
     expected = 0
     assert actual == expected
 
-# def test_max_val_negative():
-#     tree = BinaryTree()
-#     tree.add(-1)
-#     tree.add(-5)
-#     tree.add(-4)
-#     tree.add(-7)
-#     actual = find_maximum_value(tree)
-#     expected = -1
-#     assert actual == expected
+def test_max_val_negative():
+    tree = BinaryTree()
+    tree.add(-1)
+    tree.add(-5)
+    tree.add(-4)
+    tree.add(-7)
+    actual = find_maximum_value(tree)
+    expected = -1
+    assert actual == expected
+
+
