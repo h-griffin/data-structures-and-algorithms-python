@@ -10,7 +10,5 @@ def find_maximum_value(tree):
     for i in collection:
         if i > max_val:
             max_val = i
-        else:
-            print('doing nothing')
 
     return max_val

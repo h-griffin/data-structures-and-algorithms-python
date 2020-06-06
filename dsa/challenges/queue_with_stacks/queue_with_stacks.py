@@ -60,6 +60,9 @@ class Stack:
 
     def pop(self):
         """removes node on top of stack and returns that value"""
+        if not self._front:
+            raise Exception('cannot pop an empty stack')
+
         if self.top:
             outgoing = self.top
             self.top = self.top.next
