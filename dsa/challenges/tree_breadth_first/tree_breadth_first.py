@@ -9,32 +9,6 @@ class Node:
     def __str__(self):
         return f'Node : {self.value}'
 
-
-    def add(self, value):
-        node = Node(value)
-        breadth = Queue()
-
-        if self.root:
-            breadth.enqueue(self.root)
-
-            while not breadth.is_empty():
-                front = breadth.dequeue()
-                if not front.left:
-                    front.left = node
-                    return
-                if not front.right:
-                    front.right = node
-                    return
-                if front.left:
-                    breadth.enqueue(front.left)
-                if front.right:
-                    breadth.enqueue(front.right)
-
-        else:
-            self.root = node
-        return
-
-
 class BinaryTree:
     def __init__(self):
         self.root = None
@@ -125,6 +99,7 @@ class BinaryTree:
             self.root = node
         return
 
+
 class BinarySearchTree(BinaryTree):
     #values greater than root go right, less go left
 
@@ -184,32 +159,7 @@ class Queue:
         """returns bool if queue is empty"""
         return len(self.storage) == 0
 
-def fizz_buzz_tree(tree):
-    """Takes in a tree as a single argument. Changes values throughout the tree based on Fizzbuzz logic, and returns a new tree in the same order and structure.
-    """
-    collection = tree.breadth_first()
-    new_collection = []
 
-    for i in collection:
-        if i % 3 == 0 and i % 5 == 0:
-            i = 'FizzBuzz'
-            new_collection.append(i)
-        elif i % 3 == 0:
-            i = 'Fizz'
-            new_collection.append(i)
-        elif i % 5 == 0:
-            i = 'Buzz'
-            new_collection.append(i)
-        else:
-            i = str(i)
-            new_collection.append(i)
-
-    new_tree = BinaryTree()
-
-    for i in new_collection:
-        new_tree.add(i)
-
-    return new_tree
 
 
 #notes

@@ -1,4 +1,5 @@
 # Challenge Summary
+binary search tree
 
 ## Challenge Description
 Create binary search tree class that takes in a binary tree and traverses depth first
@@ -29,4 +30,4 @@ Define a contains method that takes in a value and searches the tree
 		Iterate through list and return true or false
 
 ## Solution
-![ whiteboard image](/assets/tree.png)
+![ binary search tree whiteboard image](/assets/tree.png)

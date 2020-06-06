@@ -116,6 +116,8 @@ if __name__ == "__main__":
 # (b) Preorder (Root, Left, Right) : 1 2 4 5 3
 # (c) Postorder (Left, Right, Root) : 4 5 2 3 1
 
+#breadth first (top to bottom left to right) : 1 2 3 4 5
+
 #SyntaxError: unexpected EOF while parsing
 
 
