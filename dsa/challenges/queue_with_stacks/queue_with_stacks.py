@@ -4,11 +4,16 @@ class PseudoQueue:
         self._outbox = Stack()
 
 
-    def enqueue(self, value):
-        """takes in a value and adds new node to bottom of stack //add last in line """
-        while not self._outbox.is_empty():
-            self._inbox.push(self._outbox.pop())
-        self._inbox.push(value)
+    # def enqueue(self, value):
+    #     """takes in a value and adds new node to bottom of stack //add last in line """
+    #     # while not self._outbox.is_empty():
+    #     #     self._inbox.push(self._outbox.pop())
+    #     self._inbox.push(value)
+
+    #joseph
+    def enqueue(self, item):
+        """Takes any value as an argument and adds a new node with that value to the back of the queue."""
+        self._inbox.push(item)
 
 
     def dequeue(self):
@@ -41,13 +46,21 @@ class Stack:
     def __init__(self):
         self.top = None
 
+    # def __str__(self):
+    #     res = ""
+    #     current = self.top
+    #     while current:
+    #         res += f"{ [current.value]} -> "
+    #         current = current.next
+    #     return res + "NULL"
     def __str__(self):
-        res = ""
+        output = ""
         current = self.top
         while current:
-            res += f"{ [current.value]} -> "
+            output += f"{ [current.value]} -> "
             current = current.next
-        return res + "NULL"
+        return output + "NULL"
+
 
     def push (self, value):
         """takes in one value and adds new Node to stack"""

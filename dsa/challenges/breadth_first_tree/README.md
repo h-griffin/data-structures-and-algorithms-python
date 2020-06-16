@@ -17,4 +17,4 @@ Create a function that takes in a binary tree
 
 
 ## Solution
-![ breadth first whiteboard image](/assets/tree_breadth_first.png)
+![ breadth first tree whiteboard image](/assets/breadth_first_tree.png)
