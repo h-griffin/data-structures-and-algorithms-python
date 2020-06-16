@@ -1,5 +1,5 @@
 import pytest
-from dsa.challenges.tree_breadth_first.tree_breadth_first import BinaryTree, Queue, Node, BinarySearchTree
+from dsa.challenges.breadth_first_tree.breadth_first_tree import BinaryTree, Queue, Node, BinarySearchTree
 
 def test_breadth_first():
     bst = BinaryTree()

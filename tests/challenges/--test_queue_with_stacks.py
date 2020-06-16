@@ -2,13 +2,13 @@ import pytest
 from dsa.challenges.queue_with_stacks.queue_with_stacks import PseudoQueue, Node, Stack
 
 
-def test_Node_exists():
+def test_node():
     assert Node("test")
 
-def test_Stack_exists():
+def test_stack():
     assert Stack()
 
-def test_PseudoQueue_exists():
+def test_PseudoQueue():
     assert PseudoQueue()
 
 # def test_pq_en_2():
@@ -18,6 +18,16 @@ def test_PseudoQueue_exists():
 #     actual = str(pq._inbox)
 #     expected = "[bananas] -> [apples] -> NULL"
 #     assert actual == expected
+
+# def test_PseudoQueue_enqueue_multiple_items():
+#     my_queue = PseudoQueue()
+#     my_queue.enqueue(1)
+#     my_queue.enqueue(2)
+#     my_queue.enqueue(3)
+#     actual = str(my_queue._inbox)
+#     expected = "[3] -> [2] -> [1] -> NULL"
+#     assert actual == expected
+
 
 # def test_enqueue_two():
 #     pq = PseudoQueue()
