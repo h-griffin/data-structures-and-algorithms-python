@@ -1,8 +1,8 @@
 def merge_sort(my_list):
     if len(my_list) > 1:
         mid = len(my_list) // 2 #
-        left = my_list[:mid]
-        right = my_list[mid:]
+        left = my_list[:mid] # :stop at mid
+        right = my_list[mid:] # start at mid :
 
         # Recursive call on each half
         merge_sort(left)
@@ -29,7 +29,7 @@ def merge_sort(my_list):
 
         # For all the remaining values
         while i < len(left):
-            my_list[k] = left[i]
+            my_list[k] = left[i] # new index at k itteration is now value at left i
             i += 1
             k += 1
 
@@ -43,3 +43,41 @@ if __name__ == "__main__":
     my_list = [54,26,93,17,77,31,44,55,20]
     merge_sort(my_list)
     print(my_list)
+
+
+
+# PSUDO
+
+ALGORITHM Mergesort(arr)
+    DECLARE n <-- arr.length
+
+    if n > 1
+      DECLARE mid <-- n/2
+      DECLARE left <-- arr[0...mid]
+      DECLARE right <-- arr[mid...n]
+      // sort the left side
+      Mergesort(left)
+      // sort the right side
+      Mergesort(right)
+      // merge the sorted left and right sides together
+      Merge(left, right, arr)
+
+ALGORITHM Merge(left, right, arr)
+    DECLARE i <-- 0
+    DECLARE j <-- 0
+    DECLARE k <-- 0
+
+    while i < left.length && j < right.length
+        if left[i] <= right[j]
+            arr[k] <-- left[i]
+            i <-- i + 1
+        else
+            arr[k] <-- right[j]
+            j <-- j + 1
+
+        k <-- k + 1
+
+    if i = left.length
+       set remaining entries in arr to remaining values in right
+    else
+       set remaining entries in arr to remaining values in left
