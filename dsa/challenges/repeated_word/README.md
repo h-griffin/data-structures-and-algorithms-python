@@ -31,7 +31,7 @@ regex
         [ 'it', 'is' ]   ^
              [ 'it', 'is', 'dark', 'isnt' ]
 
-'it' in list = repeat word
+'it' in list = TRUE = repeat word
 
 [ 'it', 'is', 'dark', 'isnt', it', ]
     ^                          ^
