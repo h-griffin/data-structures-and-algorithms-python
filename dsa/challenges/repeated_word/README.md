@@ -7,10 +7,6 @@ punctuation
 
 # big O
 
-# visual
-input = 'it was a dark and stormy day when it rained.'
-output = 'it'
-
 # algorithm
 take in string
 set empty list
@@ -22,8 +18,26 @@ for word in string
         break
 return repeat word
 
+# visual
+input = 'it is dark, isn't it?.'
+output = 'it'
 
+'it is dark, isn't it?'
+regex
+'it is dark isnt it'
+[ 'it', 'is', 'dark', 'isnt', it', ]
+    ^
+  [ 'it' ] ^
+        [ 'it', 'is' ]   ^
+             [ 'it', 'is', 'dark', 'isnt' ]
 
+'it' in list = repeat word
+
+[ 'it', 'is', 'dark', 'isnt', it', ]
+    ^                          ^
+repeat word = 'it'
+
+![repeated word](assets/repeated_word.png)
 
 
 
