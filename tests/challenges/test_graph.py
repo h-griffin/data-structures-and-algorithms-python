@@ -17,8 +17,7 @@ def test_add_edge():
     bananas = graph.add_vertex('bananas')
     graph.add_edge(apples, bananas)
 
-
-    assert True, ('come back later')
+    assert True, ('will be fully excersized in get neighbors test')
 
 def test_add_edge_outsider():
     """edge can only be created between two vertexes inside graph"""
@@ -33,7 +32,6 @@ def test_add_edge_outsider():
 def test_get_vertices():
     # returns collection of all vertices
     graph = Graph()
-
     apples = graph.add_vertex('apples')
     bananas = graph.add_vertex('bananas')
 
@@ -43,7 +41,6 @@ def test_get_vertices():
 
 def test_get_edges(): # edges = neighbors
     graph = Graph()
-
     apples = graph.add_vertex('apples')
     bananas = graph.add_vertex('bananas')
     graph.add_edge(apples, bananas)
@@ -57,7 +54,6 @@ def test_get_edges(): # edges = neighbors
 def test_get_size():
     """test number of vertexes"""
     graph = Graph()
-
     apples = graph.add_vertex('apples')
     bananas = graph.add_vertex('bananas')
 
