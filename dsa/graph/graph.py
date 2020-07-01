@@ -35,15 +35,40 @@ class Graph:
         """returns all keys in graph"""
         return self._adjacency_list.keys()
 
-    def get_neighbors(self, vertex): # get edges
+    def get_neighbors(self, vertex):
+        """returns all edges"""
         return self._adjacency_list.get(vertex, [])
 
+    def size(self):
+        """ Returns the total number of vertices/nodes in the graph"""
+        return len(self.graph) if len(self.graph) > 0 else None
 
+    def breadth_first(self, vertex):
+        """ Takes in a node/vertex and performs a breadth first traversal of the graph. This will return a collection of the nodes/vertices within the graph from a breadth first traversal perspective of the given node/vertex.
+        """
+        nodes = []
+        holder = set()
+        breadth = Queue()
+        holder.add(vertex.value)
+        breadth.enqueue(vertex)
 
+        while not breadth.is_empty():
+            front = breadth.dequeue()
+            nodes.append(front.value)
+
+            for child in self.graph[front]:
+                if child.vertex.value not in holder:
+                    holder.add(child.vertex.value)
+                    breadth.enqueue(child.vertex)
+
+        return nodes
 
 class Vertex:
     def __init__(self, value):
         self.value = value
+        self.next = None
+    def __str__(self):
+        return self.value
 
 
 class Edge:
