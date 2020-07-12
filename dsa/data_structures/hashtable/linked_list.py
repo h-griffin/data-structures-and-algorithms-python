@@ -8,21 +8,21 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    def append(self, data):
+    def add(self, data):
         node = Node(data)
-        # if list is empty
-        if not self.head:
+
+        if not self.head:   # if list is empty
             self.head = node
         else:
             current = self.head
-            while current.next:
+            while current.next:     # to last where there is no next
                 current = current.next
-            current.next = node
+            current.next = node     # adds to last nodes next
 
     def display(self):
         values = []
         current = self.head
-        while current:
-            values.append(current.data)
+        while current:     # while there is a node in list
+            values.append(current.data[0])     # add value/data to values list
             current = current.next
         return values
