@@ -7,7 +7,7 @@ class Hashmap:
 
     def __init__(self, size):
         self.size = size
-        self.map = [none] * self.size
+        self.map = [None] * self.size
 
     def hash(self, key):
         """takes in a string and returns a hash code"""
@@ -36,23 +36,23 @@ class Hashmap:
             ll = self.map[index]            # index keys are stored in linked list for collisions
             while ll.head:
                 if ll.head.data[0] == key:  # if key: is correct
-                    return ll.head.next     # return :value
+                    return ll.head.data[1]     # return :value
                 else:
                     ll.head = ll.head.next  # else look at next key:
         else:
             return None
 
-def contains(self, key):
-    """takes in a key adn returns bool if key exists in hashmap"""
-    index = self.hash(key)
+    def contains(self, key):
+        """takes in a key adn returns bool if key exists in hashmap"""
+        index = self.hash(key)
 
-    if self.map[index]:
-        collection = self.map[index].display()
-        if key in collection:
-            return True
-        else:
-            pass
-    return False
+        if self.map[index]:
+            collection = self.map[index].display()
+            if key in collection:
+                return True
+            else:
+                pass
+        return False
 
 
 
