@@ -13,20 +13,8 @@ reverse the array without using any built in array methods.
 ### Code Challenge
 Reverse an array.
 
-Specifications
-Read all of the following instructions carefully. Name things exactly as described.
-Do all your work in a public repository called data-structures-and-algorithms.
-Create a new branch in your repo called array-reverse.
-Your top-level readme should contain a “Table of Contents” navigation to all of your challenges and implementations so far. (Don’t forget to update it!)
-This assignment should be completed within the challenges subdirectory of the repository.
-On your branch, create…
-C#: a new .NET Core console project named ArrayReverse. Within your Program.cs create a new static method outside of Main() following the naming conventions below. Call your newly created method in Main() once complete.
-JavaScript: a folder named arrayReverse which contains a file called array-reverse.js
-Python: a folder named array_reverse which contains a file called array_reverse.py
-Java: a file called ArrayReverse.java
-Include any language-specific configuration files required for this challenge to become an individual component, module, library, etc.
-NOTE: You can find an example of this configuration for your course in your class lecture repository.
-Feature Tasks
+
+### Feature Tasks
 Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
 Example
 ```Input	Output
