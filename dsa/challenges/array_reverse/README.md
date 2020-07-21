@@ -31,31 +31,3 @@ Note: There is no test requirement for Class01. Going forward you will be requir
 
 Stretch Goal
 Once you’ve achieved a working solution, implement the same feature with a different methodology. (Hint: what different techniques do you have when working with arrays? Recursion, loops, indexes, modifying the array input directly…)
-
-Documentation: Your README.md
-# Reverse an Array
-<!-- Short summary or background information -->
-
-## Challenge
-<!-- Description of the challenge -->
-
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-
-## Solution
-<!-- Embedded whiteboard image -->
-
-Submission Instructions
-Take a photo of your completed whiteboard, matching the example whiteboard layout.
-Copy your photo into an /assets directory in your repo
-Give the image file the same name as the branch you are working on
-Embed the image in your README.md documentation
-Create a pull request from your branch to your master branch
-In your open pull request, leave as a comment a checklist of the specifications and tasks above, with the actual steps that you completed checked off
-Submitting your completed work to Canvas:
-Copy the link to your open pull request and paste it into the corresponding Canvas assignment
-Leave a description of how long this assignment took you in the comments box
-Add any additional comments you like about your process or any difficulties you may have had with the assignment
-Merge your branch into master, and delete your branch (don’t worry, the PR link will still work)
-
-

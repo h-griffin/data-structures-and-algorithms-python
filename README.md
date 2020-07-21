@@ -12,7 +12,7 @@
 - [challenge-07 : ll kth from the end](dsa/data_structures/linked_list)
 - [challenge-08 : ll merge](dsa/challenges/ll_merge)
 - challenge-09 : whiteboard interview 1
-- [challenge-10: stacks and queues](dsa/challenges/stacks_and_queue)
+- [challenge-10: stacks and queues](dsa/data_structures/stacks_and_queue)
 - [challenge-11: queue with stacks](dsa/challenges/queue_with_stacks)
 - [challenge-12: fifo animal shelter](dsa/challenges/fifo_animal_shelter)
 - [challenge-13: multi bracket validation](dsa/challenges/multi_bracket_validation)
@@ -26,7 +26,9 @@
 - [challenge-27: blog merge sort](dsa/challenges/blog_merge_sort)
 - [challenge-28: blog quick sort](dsa/challenges/blog_quick_sort)
 - challenge-29: whiteboard interview 4
-- [challenge-30: Hash Table](dsa/challenges/hashtable)
+- [challenge-30: Hash Table](dsa/data_structures/hashtable)
 - [challenge-31: Repeated Word](dsa/challenges/repeated_word)
 - [challenge-32: Tree Intersection](dsa/challenges/tree_intersection)
 - [challenge-33: Left Join](dsa/challenges/left_join)
+- challenge-34: whiteboard interview 5
+- [challenge-35: Graph](dsa/sata_structures/graph)

@@ -88,26 +88,28 @@ Documentation: Your README.md
 ### Feature Tasks
 Write the following methods for the Linked List class:
 
-.append(value) which adds a new node with the given value to the end of the list
-.insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
-.insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+- .append(value) which adds a new node with the given value to the end of the list
+- .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+- .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 Examples
-.append(value)
-Input	Args	Output
-head -> [1] -> [3] -> [2] -> X	5	head -> [1] -> [3] -> [2] -> [5] -> X
-head -> X	1	head -> [1] -> X
-.insertBefore(value, newVal)
-Input	Args	Output
-head -> [1] -> [3] -> [2] -> X	3, 5	head -> [1] -> [5] -> [3] -> [2] -> X
-head -> [1] -> [3] -> [2] -> X	1, 5	head -> [5] -> [1] -> [3] -> [2] -> X
-head -> [1] -> [2] -> [2] -> X	2, 5	head -> [1] -> [5] -> [2] -> [2] -> X
-head -> [1] -> [3] -> [2] -> X	4, 5	Exception
-.insertAfter(value, newVal)
-Input	Args	Output
-head -> [1] -> [3] -> [2] -> X	3, 5	head -> [1] -> [3] -> [5] -> [2] -> X
-head -> [1] -> [3] -> [2] -> X	2, 5	head -> [1] -> [3] -> [2] -> [5] -> X
-head -> [1] -> [2] -> [2] -> X	2, 5	head -> [1] -> [2] -> [5] -> [2] -> X
-head -> [1] -> [3] -> [2] -> X	4, 5	Exception
+- .append(value)
+    Input	Args	Output
+    head -> [1] -> [3] -> [2] -> X	5	head -> [1] -> [3] -> [2] -> [5] -> X
+    head -> X	1	head -> [1] -> X
+- .insertBefore(value, newVal)
+    Input	Args	Output
+    head -> [1] -> [3] -> [2] -> X	3, 5	head -> [1] -> [5] -> [3] -> [2] -> X
+    head -> [1] -> [3] -> [2] -> X	1, 5	head -> [5] -> [1] -> [3] -> [2] -> X
+    head -> [1] -> [2] -> [2] -> X	2, 5	head -> [1] -> [5] -> [2] -> [2] -> X
+    head -> [1] -> [3] -> [2] -> X	4, 5	Exception
+
+- .insertAfter(value, newVal)
+    Input	Args	Output
+    head -> [1] -> [3] -> [2] -> X	3, 5	head -> [1] -> [3] -> [5] -> [2] -> X
+    head -> [1] -> [3] -> [2] -> X	2, 5	head -> [1] -> [3] -> [2] -> [5] -> X
+    head -> [1] -> [2] -> [2] -> X	2, 5	head -> [1] -> [2] -> [5] -> [2] -> X
+    head -> [1] -> [3] -> [2] -> X	4, 5	Exception
+
 Unit Tests
 Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
 
@@ -137,6 +139,7 @@ Submit the assignment following [these instructions](https://codefellows.github.
 
 ### Feature Tasks
 Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
 Example
 ll.kthFromEnd(k)
 Input ll	Arg k	Output
