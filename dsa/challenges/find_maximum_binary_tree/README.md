@@ -16,3 +16,17 @@ Return max value
 ## Solution
 ![ maximum binary tree whiteboard image](/assets/find_maximum_binary_tree.png)
 
+### Feature Tasks
+Write an instance method called find-maximum-value. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+Example
+Input
+example
+![binary tree](assets/binary_tree.png)
+Output
+11
+Requirements
+Ensure your complete solution follows the standard requirements.
+
+Write [unit tests](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Challenge_Testing)
+Follow the [template for a well-formatted README](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Challenge_Documentation)
+Submit the assignment following [these instructions](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Challenge_Submission)

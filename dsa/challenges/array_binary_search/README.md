@@ -35,6 +35,6 @@ Once you’ve achieved a working solution, benchmark with varying array sizes (1
 Requirements
 Ensure your complete solution follows the standard requirements.
 
-Write unit tests
-Follow the template for a well-formatted README
-Submit the assignment following these instructions
+Write [unit tests](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Challenge_Testing)
+Follow the [template for a well-formatted README](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Challenge_Documentation)
+Submit the assignment following [these instructions](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Challenge_Submission)

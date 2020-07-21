@@ -22,9 +22,9 @@
 - [challenge-17: breadth first](dsa/challenges/tree)
 - [challenge-18 : find maximum binary tree](dsa/challenges/find_maximum_binary_tree)
 - challenge-19: whiteboard interview 3
-- [challenge-26: insertion sort](dsa/challenges/blog_insertion_sort)
-- [challenge-27: merge sort](dsa/challenges/blog_merge_sort)
-- [challenge-28: quick sort](dsa/challenges/blog_quick_sort)
+- [challenge-26: blog insertion sort](dsa/challenges/blog_insertion_sort)
+- [challenge-27: blog merge sort](dsa/challenges/blog_merge_sort)
+- [challenge-28: blog quick sort](dsa/challenges/blog_quick_sort)
 - challenge-29: whiteboard interview 4
 - [challenge-30: Hash Table](dsa/challenges/hashtable)
 - [challenge-31: Repeated Word](dsa/challenges/repeated_word)
