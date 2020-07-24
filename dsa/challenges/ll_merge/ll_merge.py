@@ -2,6 +2,7 @@ from dsa.data_structures.linked_list.linked_list import Node, Linked_list
 
 def merge_lists( list1, list2):
     """takes two linked lists and merges them starting with head1 then head2"""
+    # when one list is shorter 
     if list1.head == None:
         return list2
     if list2.head == None:
@@ -36,4 +37,4 @@ def merge_lists( list1, list2):
         else:
             list2_current = False
     return merged
-  
+

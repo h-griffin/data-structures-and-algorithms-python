@@ -29,7 +29,8 @@ class Graph:
         self._adjacency_list[v] = [] # list of neighbors
         return v
 
-    def add_edge(self, start_vertex, end_vertex, weight=0): # add neighbor
+    # add neighbor
+    def add_edge(self, start_vertex, end_vertex, weight=0):
         """takes in two vertexes already existing in the graph, with an optional weight. returns nothing"""
         if start_vertex not in self._adjacency_list:
             raise KeyError('start vertex not in graph')

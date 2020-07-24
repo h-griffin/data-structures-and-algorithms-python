@@ -1,5 +1,34 @@
 from collections import deque
 
+def fizz_buzz_tree(tree):
+    """Takes in a tree as a single argument. Changes values throughout the tree based on Fizzbuzz logic, and returns a new tree in the same order and structure.
+    """
+    collection = tree.breadth_first()
+    new_collection = []
+
+    for i in collection:
+        if i % 3 == 0 and i % 5 == 0:
+            i = 'FizzBuzz'
+            new_collection.append(i)
+        elif i % 3 == 0:
+            i = 'Fizz'
+            new_collection.append(i)
+        elif i % 5 == 0:
+            i = 'Buzz'
+            new_collection.append(i)
+        else:
+            i = str(i)
+            new_collection.append(i)
+
+    new_tree = BinaryTree()
+
+    for i in new_collection:
+        new_tree.add(i)
+
+    return new_tree
+
+
+
 class Node:
     def __init__(self, value, left=None, right=None):
         self.value = value
@@ -184,32 +213,6 @@ class Queue:
         """returns bool if queue is empty"""
         return len(self.storage) == 0
 
-def fizz_buzz_tree(tree):
-    """Takes in a tree as a single argument. Changes values throughout the tree based on Fizzbuzz logic, and returns a new tree in the same order and structure.
-    """
-    collection = tree.breadth_first()
-    new_collection = []
-
-    for i in collection:
-        if i % 3 == 0 and i % 5 == 0:
-            i = 'FizzBuzz'
-            new_collection.append(i)
-        elif i % 3 == 0:
-            i = 'Fizz'
-            new_collection.append(i)
-        elif i % 5 == 0:
-            i = 'Buzz'
-            new_collection.append(i)
-        else:
-            i = str(i)
-            new_collection.append(i)
-
-    new_tree = BinaryTree()
-
-    for i in new_collection:
-        new_tree.add(i)
-
-    return new_tree
 
 
 #notes

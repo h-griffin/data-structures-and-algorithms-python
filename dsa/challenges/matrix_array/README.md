@@ -16,15 +16,6 @@ loop through first array of arrays, for each index in the range of that indexed 
 ![matrix array whiteboard image](/assets/matrix_array.png)
 
 ### Structure
-Familiarize yourself with the grading rubric, so you know how to score the interview.
-
-Look for effective problem solving, efficient use of time, and effective communication with the whiteboard space available.
-
-Every solution might look a little different, but the candidate should be able to at least convince you that their code works to solve the problem.
-
-Assign points for each item on the Rubric, according to how well the candidate executed on that skill.
-
-Add up all the points at the end, and record the total at the bottom of the page.
 
 Example
 ```Input	Output
