@@ -8,19 +8,22 @@ class Stack:
         self.top = None
 
     def push (self, value):
+        """takes in a value and adds node-value to top of stack"""
         self.top = Node(value, self.top)
 
     def pop(self):
-
+        """removes value from top of stack and returns its value"""
         if self.top:
             outgoing = self.top
             self.top = self.top.next
             return outgoing.value
 
     def peek(self):
+        """returns value at top of stack"""
         return self.top.value
 
     def is_empty(self):
+        """boolean if stack is empty"""
         return self.top is None
 
 class AnimalShelter:
@@ -31,11 +34,13 @@ class AnimalShelter:
 
 
     def enqueue(self, animal):
+        """takes in an animal and adds to queue if it is dog or cat"""
         if animal in ['cat','dog']:
             self.kennel.push(animal)
             print(self.kennel)
 
     def dequeue(self, pref):
+        """takes in a preference and returns dog or cat first in line, if no pref is given, null"""
         if pref in ['cat', 'dog']:
             while self.kennel.peek() != pref:
               self.temp.append(self.kennel.pop())
@@ -47,25 +52,3 @@ class AnimalShelter:
         if pref not in ['cat', 'dog']:
             return None
 
-
-
-if __name__ == "__main__":
-    # pass
-
-## tests
-# def test_empty_kennel():
-#     actual = AnimalShelter.kennel.is_empty()
-#     expected = None
-#     assert actual == expected
-
-# def test_is_peek():
-    kennel = AnimalShelter()
-    kennel_ref = [kennel.enqueue(i) for i in ['cat', 'dog', 'cat']]
-    actual = kennel_ref.kennel.peek()
-    assert actual == 'cat'
-
-    actual = kennel_ref.kennel.pop()
-    assert actual == 'dog'
-    #shfshfd
-
-#changes for commit
