@@ -1,5 +1,5 @@
 import pytest
-from dsa.challenges.stacks_and_queue.stacks_and_queue import Node, Linked_list, Queue, Stack
+from dsa.data_structures.stacks_and_queue.stacks_and_queue import Node, Linked_list, Queue, Stack
 
 
 def test_ll():

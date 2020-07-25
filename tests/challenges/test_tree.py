@@ -1,4 +1,4 @@
-from dsa.challenges.tree.tree import BinaryTree, BinarySearchTree, Node
+from dsa.data_structures.tree.tree import BinaryTree, BinarySearchTree, Node
 
 def test_tree():
     assert BinaryTree()
