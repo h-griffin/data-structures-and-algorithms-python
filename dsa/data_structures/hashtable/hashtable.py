@@ -49,10 +49,10 @@ class Hashmap:
         if self.map[index]:
             collection = self.map[index].display()
             if key in collection:
-                return True
+                return True     # will return true only if it can reach it
             else:
                 pass
-        return False
+        return False           # if it cant reach it will finish with false after loop
 
 
 
