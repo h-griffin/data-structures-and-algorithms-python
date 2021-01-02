@@ -5,6 +5,7 @@ def test_ll_instance():
     assert Linked_list()
 
 def test_LinkedList_str():
+    """uses insert() to test str()"""
     ll = Linked_list()
     ll.insert("apple")
     ll.insert("banana")
@@ -13,16 +14,19 @@ def test_LinkedList_str():
     assert actual == expected
 
 def test_ll_repr():
+    """uses an empty linked list to test repr()"""
     ll = Linked_list()
     actual = repr(ll)
     expect = "linked list : None"
     assert actual == expect
 
 def test_ll_head():
+    """uses an empty linked list to test _init_()"""
     ll = Linked_list()
     assert ll.head == None
 
 def test_ll_insert():
+    """tests insert() adds node to head"""
     ll = Linked_list()
     ll.insert("apple")
     ll.insert("banana")
@@ -30,6 +34,7 @@ def test_ll_insert():
     assert ll.head.next.value == 'apple'
 
 def test_ll_includes_true():
+    """uses insert() to test includes()"""
     ll = Linked_list()
     ll.insert("apple")
     ll.insert("banana")
@@ -39,6 +44,7 @@ def test_ll_includes_true():
     assert actual == expected
 
 def test_ll_includes_false():
+    """uses insert() to test includes()"""
     ll = Linked_list()
     ll.insert("apple")
     ll.insert("banana")
@@ -48,24 +54,28 @@ def test_ll_includes_false():
     assert actual == expected
 
 def test_ll_insert_before(ll_list):
+    """uses pytest fixture to test insert_before() adds node before given value"""
     ll_list.insert_before("apple", "donut")
     actual = str(ll_list)
     expected = "{ carrot } -> { banana } -> { donut } -> { apple } -> NULL"
     assert actual == expected
 
 def test_ll_insert_after(ll_list):
+    """uses pytest fixture to test insert_after() adds node after given value"""
     ll_list.insert_after("banana", "donut")
     actual = str(ll_list)
     expected = "{ carrot } -> { banana } -> { donut } -> { apple } -> NULL"
     assert actual == expected
 
 def test_ll_append(ll_list):
+    """uses pytest fixture to test append() adds node to tail"""
     ll_list.append("donut")
     actual = str(ll_list)
     expected = "{ carrot } -> { banana } -> { apple } -> { donut } -> NULL"
     assert actual == expected
 
 def test_LinkedList_kth_from_end_0():
+    """uses insert to test kth_from_end() returns k places away from tail"""
     ll = Linked_list()
     ll.insert(2)
     ll.insert(8)
@@ -76,6 +86,7 @@ def test_LinkedList_kth_from_end_0():
     assert actual == expected
 
 def test_LinkedList_kth_from_end_2():
+    """uses insert to test kth_from_end() returns k places away from tail"""
     ll = Linked_list()
     ll.insert(2)
     ll.insert(8)
@@ -95,7 +106,7 @@ def test_node_exception():
 
 @pytest.fixture
 def ll_list():
-    """Sets up a linked list instance along with adds a few nodes for testing"""
+    """Sets up a linked list instance along with adds 3 nodes for testing "{ carrot } -> { banana } -> { apple } -> NULL""""
     ll = Linked_list()
     ll.insert("apple")
     ll.insert("banana")
